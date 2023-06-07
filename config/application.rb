@@ -5,7 +5,7 @@ require "rails/all"
 
 Bundler.require(*Rails.groups)
 
-module GoogleSheetDataFetch
+module AwsS3PaperClip
   class Application < Rails::Application
     config.active_job.queue_adapter = :sidekiq
     config.eager_load_paths += %W( #{config.root}/lib #{config.root}/config/routes )

@@ -5,6 +5,8 @@ module Users
     extend ActiveSupport::Concern
 
     included do
+      has_one_attached :avatar
+      has_attached_file :image, styles: { thumb: "64x64#", normal: "400x400>" }
     end
   end
 end

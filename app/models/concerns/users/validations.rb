@@ -7,6 +7,8 @@ module Users
     included do
       validates :email, uniqueness: { case_sensitive: false }, format: { with: URI::MailTo::EMAIL_REGEXP }
 
+      validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
       validate :password_format, if: :password_changed?
 
       private

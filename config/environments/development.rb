@@ -20,7 +20,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon
 
   config.action_mailer.raise_delivery_errors = false
 
@@ -35,4 +35,6 @@ Rails.application.configure do
   config.active_record.migration_error = :page_load
 
   config.active_record.verbose_query_logs = true
+
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end

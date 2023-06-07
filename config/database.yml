@@ -14,7 +14,7 @@ development:
 
 test:
   <<: *default
-  database: google_sheet_data_fetch_test
+  database: aws_s3_paper_clip_test
 
 staging:
   <<: *default
